@@ -7,10 +7,10 @@ import traceback
 df_nd_com = pd.read_excel('./data/data_nd_per.xlsx')
 dat_nd = df_nd_com.values.tolist()
 class_to = []
-for i in range(10):
-    for j in range(2):
-        year_ = 2016+i
-        team_ = 1+j
+for i in range(1):
+    for j in range(1):
+        year_ = 2016
+        team_ = 1
         she_name = str(year_)+'_'+str(team_)
         df_num = pd.read_excel("./data/data_num.xlsx", sheet_name=she_name)
         dat_num = df_num.values.tolist()
@@ -39,8 +39,8 @@ for i in range(10):
                 ttt = ga.ga_1(population_begin, class_lap_n, class_lap, mut_rate, num_iteration)
                 pass
     pass
-print(class_to)
-dd = pd.DataFrame(class_to)
-with pd.ExcelWriter('dd.xlsx', engine='openpyxl') as writer:
-    dd.to_excel(writer, sheet_name='1', index=False)
+# print(class_to)
+# dd = pd.DataFrame(class_to)
+# with pd.ExcelWriter('dd.xlsx', engine='openpyxl') as writer:
+#     dd.to_excel(writer, sheet_name='1', index=False)
 

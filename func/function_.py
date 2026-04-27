@@ -1,8 +1,6 @@
 import ast
 import re
-import requests
 import traceback
-from openai import OpenAI
 
 
 C_N = {'一':1,'二':2,'三':3,'四':4,'五':5,'六':6,'七':7,'日':7}
